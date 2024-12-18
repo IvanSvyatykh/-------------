@@ -1,0 +1,6 @@
+install.packages("readxl")
+library("readxl")
+myData<-read_excel("data/lab6/data.xlsx")
+myRegression1<-lm(`Цена, долл.` ~ `Общая площадь`,data=myData)
+myRegression<-lm(`Цена, долл.` ~.,data=myData)
+summary(myRegression)
